@@ -21,6 +21,6 @@ gnuplot
 * Red
    * yellow
 
-```javascript
+```
 pip install python
 ```
