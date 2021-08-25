@@ -1,7 +1,7 @@
 # Installation-Package-for-Research
 # 科研相关软件安装方法和流程，包括：
-## gcc
-## cmake
+> gcc
+> cmake
 <p>fftw</p>
 <p>mpi</p>
 <p>VASP</p>
