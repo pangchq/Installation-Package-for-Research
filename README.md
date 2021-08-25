@@ -3,13 +3,22 @@
 > gcc
 > 
 > cmake
-<p>fftw</p>
-<p>mpi</p>
-<p>VASP</p>
-<p>Lammps</p>
-<p>Gromacs</p>
-<p>Materials Studio</p>
-<p>Gnuplot</p>
+>
+> fftw
+>
+> mpi
+>
+> VASP
+>
+> Lammps
+>
+> Gromacs
+>
+> Materials Studio
+>
+> gnuplot
+>
+
 """
 pip install python
 """
