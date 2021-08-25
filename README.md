@@ -18,5 +18,5 @@ Materials Studio
 
 gnuplot
 
-*   Red
-*   yellow
+   *   Red
+   *   yellow
