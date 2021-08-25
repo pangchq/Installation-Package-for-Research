@@ -9,3 +9,6 @@
 <p>Gromacs</p>
 <p>Materials Studio</p>
 <p>Gnuplot</p>
+"""
+pip install python
+"""
