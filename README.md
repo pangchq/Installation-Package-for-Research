@@ -19,5 +19,4 @@ Materials Studio
 gnuplot
 
 *   Red
-pip install python
-"""
+*   yellow
