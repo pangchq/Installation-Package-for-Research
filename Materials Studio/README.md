@@ -37,6 +37,11 @@ line 157 $DSD_defaults::dsd_MpiAppFile = "mpd.hosts";
 ```
 line 157 $DSD_defaults::dsd_MpiAppFile = ".mpd.hosts";
 ```
+* 更改通信协议  
+```
+tar zxvf MS_lib.tar.gz
+cp lib/* /Path/to/MaterialsStudio19.1/lib/
+```
 * 提交脚本为  
 ```
 
