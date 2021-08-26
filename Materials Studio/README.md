@@ -11,7 +11,7 @@
 99) Finished with license configuration, 至此主程序安装完成
 ```
 3. 安装License;  
-```
+```bash
 根据hostname结果在msi.lic文件相应位置进行修改
 cd ~/Path/to/Accelrys/LicensePack/linux/bin
 ./lp_install ~/Path/to/msi.lic
@@ -22,29 +22,29 @@ Checkout succeeded, 看到这个说明License安装成功, MS安装完毕
 ```
 **如果在天河-2安装, 需要进行一些额外修改**  
 * vi /Path/to/BIOVIA_LicensePack/etc/lp_echovars  
-```
+```bash
 line1 #! /bin/csh -f
 ```
 改为
-```
+```bash
 line1 #! /WORK/app/osenv/ln1/bin/csh -f
 ```
 * vi /Path/to/MaterialsStudio19.1/etc/Gateway/root_default/dsd/commands/DSD_defaults.pm  
-```
+```bash
 line 157 $DSD_defaults::dsd_MpiAppFile = "mpd.hosts";
 ```
 改为
-```
+```bash
 line 157 $DSD_defaults::dsd_MpiAppFile = ".mpd.hosts";
 ```
 * 更改通信协议  
-```
+```bash
 tar zxvf MS_lib.tar.gz
 cp lib/* /Path/to/MaterialsStudio19.1/lib/
 ```
 * 提交脚本为  
 CASTEP
-```
+```bash
 #!/WORK/app/osenv/ln1/bin/bash
 #input 
 source /WORK/app/toolshs/unsetfunc
@@ -52,9 +52,9 @@ export LC_ALL=C
 export I_MPI_FABRICS=shm:tcp
 
 NUM_NODES=1
-PROCS_PER_NODE=4
+PROCS_PER_NODE=24
 BASENAME=$1
-MS_PATH=~/software/bin/MaterialsStudio8.0
+MS_PATH=/WORK/sysu_pangchq_1/app/MS2019/MaterialsStudio19.1
 NUM_PROCS=`expr $NUM_NODES \* $PROCS_PER_NODE`
 
 yhrun -N $NUM_NODES -n $NUM_NODES hostname > .names.log
@@ -87,7 +87,7 @@ done
 $MS_PATH/etc/CASTEP/bin/RunCASTEP.sh -np $NUM_PROCS $BASENAME
 ```
 DMol3
-```
+```bash
 #!/WORK/app/osenv/ln1/bin/bash
 #input 
 source /WORK/app/toolshs/unsetfunc
