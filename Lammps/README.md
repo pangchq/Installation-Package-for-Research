@@ -1,4 +1,4 @@
-## LAMMPS
+## LAMMPs
 1. 下载LAMMPS相应版本并解压;  
 2. 进入src目录, make ps、 make yes-xxx安装必要的package;  
 3. 修改MAKE/Makefile.intel_cpu, 下面是适用于天河-2的makefile.intel_cpu;  
