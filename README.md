@@ -5,7 +5,7 @@
 * fftw
 * mpi
 * VASP
-* Lammps
+* LAMMPS
 * Gromacs
 * Materials Studio
 * gnuplot
