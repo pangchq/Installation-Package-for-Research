@@ -8,7 +8,7 @@ CALL CHAIN_FORCE(T_INFO%NIONS,DYN%POSION,TOTEN,TIFOR, &
 CALL CHAIN_FORCE(T_INFO%NIONS,DYN%POSION,TOTEN,TIFOR, &
       TSIF,LATT_CUR%A,LATT_CUR%B,IO%IU6)  
 修改src/.objects源码, 在chain.o前（大概第72行）添加如下内容:  
-bfgs.o dynmat.o instanton.o lbfgs.o sd.o cg.o dimer.o bbm.o \
+bfgs.o dynmat.o instanton.o lbfgs.o sd.o cg.o dimer.o bbm.o \  
 fire.o lanczos.o neb.o qm.o opt.o \
 3. https://github.com/henniggroup/VASPsol 下载patch, copy solvation.F覆盖vasp的src文件夹下的同名文件;  
 4. https://github.com/Chengcheng-Xiao/VASP_OPT_AXIS 下载cell_relax.patch, copy到vasp根目录, patch -p0 < cell_relax.patch;  
