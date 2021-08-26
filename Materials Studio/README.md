@@ -23,13 +23,13 @@ line1 #! /bin/csh -f
 ```
 line1 #! /WORK/app/osenv/ln1/bin/csh -f
 ```
-* vi /Path/to/MaterialsStudio19.1/etc/Gateway/root_default/dsd/commands/DSD_serverutils.pm  
+* vi /Path/to/MaterialsStudio19.1/etc/Gateway/root_default/dsd/commands/DSD_defaults.pm  
 ```
-
+line 157 $DSD_defaults::dsd_MpiAppFile = "mpd.hosts";
 ```
 改为
 ```
-
+line 157 $DSD_defaults::dsd_MpiAppFile = ".mpd.hosts";
 ```
 * 提交脚本为  
 ```
