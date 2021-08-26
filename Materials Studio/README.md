@@ -43,7 +43,7 @@ tar zxvf MS_lib.tar.gz
 cp lib/* /Path/to/MaterialsStudio19.1/lib/
 ```
 * 提交脚本为  
-CASTEP, yhbatch -N 2 run_CASTEP basename  
+CASTEP, yhbatch -N 2 run_CASTEP BASENAME  
 run_CASTEP内容为  
 ```
 #!/WORK/app/osenv/ln1/bin/bash
@@ -78,7 +78,8 @@ done
 
 $MS_PATH/etc/CASTEP/bin/RunCASTEP.sh -np $NUM_PROCS $BASENAME > output.log
 ```
-DMol3
+Dmol3, yhbatch -N 2 run_Dmol3 BASENAME  
+run_Dmol3内容为  
 ```
 #!/WORK/app/osenv/ln1/bin/bash
 
@@ -112,7 +113,8 @@ done
 
 $MS_PATH/etc/DMol3/bin/RunDMol3.sh -np $NUM_PROCS $BASENAME > output.log
 ```
-MSpl
+MSpl, yhbatch -N 2 run_MSpl BASENAME  
+run_MSpl内容为  
 ```
 #!/WORK/app/osenv/ln1/bin/bash
 
