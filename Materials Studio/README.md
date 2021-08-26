@@ -43,6 +43,125 @@ tar zxvf MS_lib.tar.gz
 cp lib/* /Path/to/MaterialsStudio19.1/lib/
 ```
 * 提交脚本为  
+CASTEP
 ```
+#!/BIGDATA1/app/osenv/bin/bash
+#input 
+source /BIGDATA1/app/toolshs/unsetfunc
+export LC_ALL=C
+#source /NSFCGZ/app/osenv/ln1/set.sh
+export I_MPI_FABRICS=shm:tcp
+
+NUM_NODES=1
+PROCS_PER_NODE=4
+BASENAME=$1
+MS_PATH=~/software/bin/MaterialsStudio8.0
+NUM_PROCS=`expr $NUM_NODES \* $PROCS_PER_NODE`
+
+yhrun -N $NUM_NODES -n $NUM_NODES hostname > .names.log
+
+iNodeNameTmp=$(cat .names.log)
+iNodeName=($iNodeNameTmp)
+#mv $MS_PATH/share/data/machines.LINUX $MS_PATH/share/data/machines.LINUX.bak
+if [ -e mpd.hosts ]
+then
+  rm mpd.hosts
+fi
+
+for iName in ${iNodeName[@]}
+do
+  for ((iCore=1 ; iCore <= $PROCS_PER_NODE ; iCore++))
+  do
+    echo $iName >> mpd.hosts
+  done
+done
+
+#if [ -e 1.strace ]
+#then
+#  rm 1.strace
+#fi
+
+#strace -f -F -o 1.strace $MS_PATH/etc/Scripting/bin/RunMatScript.sh -np $NUM_PROCS $BASENAME
+#mkdir -p ${BASENAME}_Files/Documents
+#cp ${BASENAME}.xsd ${BASENAME}_Files/Documents/
+#$MS_PATH/etc/Scripting/bin/RunMatScript.sh -np $NUM_PROCS  $BASENAME 
+$MS_PATH/etc/CASTEP/bin/RunCASTEP.sh -np $NUM_PROCS $BASENAME
+
+```
+DMol3
+```
+#!/BIGDATA1/app/osenv/bin/bash
+#input 
+source /BIGDATA1/app/toolshs/unsetfunc
+export LC_ALL=C
+#source /BIGDATA1/app/osenv/ln1/set.sh
+export I_MPI_FABRICS=shm:tcp
+
+NUM_NODES=1
+PROCS_PER_NODE=22
+BASENAME=$1
+MS_PATH=/BIGDATA1/sysu_cesrmz_1/software/Accelrys/MaterialsStudio8.0
+NUM_PROCS=`expr $NUM_NODES \* $PROCS_PER_NODE`
+
+yhrun -N $NUM_NODES -n $NUM_NODES hostname > .names.log
+
+iNodeNameTmp=$(cat .names.log)
+iNodeName=($iNodeNameTmp)
+
+if [ -e mpd.hosts ]
+then
+  rm mpd.hosts
+fi
+
+for iName in ${iNodeName[@]}
+do
+  for ((iCore=1 ; iCore <= $PROCS_PER_NODE ; iCore++))
+  do
+    echo $iName >> mpd.hosts
+  done
+done
+
+#mkdir -p ${BASENAME}_Files/Documents
+#cp ${BASENAME}.xsd ${BASENAME}_Files/Documents/
+#$MS_PATH/etc/Scripting/bin/RunMatScript.sh -np $NUM_PROCS  $BASENAME 
+$MS_PATH/etc/DMol3/bin/RunDMol3.sh -np $NUM_PROCS $BASENAME
+
+```
+MSpl
+```
+#!/BIGDATA1/app/osenv/bin/bash
+#input 
+source /BIGDATA1/app/toolshs/unsetfunc
+export LC_ALL=C
+export I_MPI_FABRICS=shm:tcp
+
+NUM_NODES=1
+PROCS_PER_NODE=20
+BASENAME=$1
+MS_PATH=~/bin/Accelrys/MaterialsStudio8.0
+NUM_PROCS=`expr $NUM_NODES \* $PROCS_PER_NODE`
+
+yhrun -N $NUM_NODES -n $NUM_NODES hostname > .names.log
+
+iNodeNameTmp=$(cat .names.log)
+iNodeName=($iNodeNameTmp)
+
+if [ -e mpd.hosts ]
+then
+  rm mpd.hosts
+fi
+
+for iName in ${iNodeName[@]}
+do
+  for ((iCore=1 ; iCore <= $PROCS_PER_NODE ; iCore++))
+  do
+    echo $iName >> mpd.hosts
+  done
+done
+
+
+mkdir -p ${BASENAME}_Files/Documents
+cp ${BASENAME}.xsd ${BASENAME}_Files/Documents/
+$MS_PATH/etc/Scripting/bin/RunMatScript.sh -np $NUM_PROCS  $BASENAME 
 
 ```
