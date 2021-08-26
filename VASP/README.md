@@ -13,7 +13,7 @@ CALL CHAIN_FORCE(T_INFO%NIONS,DYN%POSION,TOTEN,TIFOR, &
 ```
 * 修改src/.objects源码, 在chain.o前（大概第72行）添加如下内容:  
 ```
-bfgs.o dynmat.o instanton.o lbfgs.o sd.o cg.o dimer.o bbm.o \  
+bfgs.o dynmat.o instanton.o lbfgs.o sd.o cg.o dimer.o bbm.o \
 fire.o lanczos.o neb.o qm.o opt.o \
 ```
 3. https://github.com/henniggroup/VASPsol 下载patch, copy solvation.F覆盖vasp的src文件夹下的同名文件;  
