@@ -1,4 +1,5 @@
 ## MS  
+**如果在天河-2安装, 先解决权限问题, 否则会被killed**
 1. 下载MS相应版本并解压;  
 2. ./install;  
 ```
@@ -13,3 +14,4 @@ cd ~/Path/to/Accelrys/LicensePack/linux/bin
 ./lp_install ~/Path/to/msi.lic
 Checkout succeeded, 看到这个说明License安装成功, MS安装完毕
 ```
+4. 
