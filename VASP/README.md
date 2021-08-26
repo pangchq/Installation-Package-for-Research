@@ -1,4 +1,4 @@
-## vasp, 包含vtst、vaspsol、fix lattice vector components这三个常用功能
+## VASP, 包含vtst、VASPsol、fix lattice vector components这三个常用功能
 1. 下载vasp相应版本并解压;  
 2. 下载vtstcode和vtstscripts, 把vtstcode解压并copy到vasp的src文件夹下, 注意对应版本  
 修改src/main.F源码:  
