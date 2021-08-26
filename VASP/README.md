@@ -14,9 +14,8 @@ fire.o lanczos.o neb.o qm.o opt.o \
 4. https://github.com/Chengcheng-Xiao/VASP_OPT_AXIS 下载cell_relax.patch, copy到vasp根目录, patch -p0 < cell_relax.patch;  
 5. module load intel-compilers/mkl-14, echo $MKLROOT;  
 6. 选择合适的makefile, cp arch/makefile.include.linux_intel makefile.include;  
-7. 修改makefile.include;  
+7. 修改makefile.include, 下面是适用于天河-2的makefile.include;  
 ```
-------------------------------------------------------------vasp makefile in Tianhe-2----------------------------------------------------------------
 # Precompiler options
 CPP_OPTIONS= -DHOST=\"LinuxIFC\"\
              -DMPI -DMPI_BLOCK=8000 \
@@ -94,6 +93,5 @@ GENCODE_ARCH    := -gencode=arch=compute_30,code=\"sm_30,compute_30\" \
                    -gencode=arch=compute_60,code=\"sm_60,compute_60\"
  
 MPI_INC    = $(I_MPI_ROOT)/include64/
-------------------------------------------------------------vasp makefile in Tianhe-2----------------------------------------------------------------
 ```
 8. make std或者make all, 可执行文件在vasp/bin文件夹下, 若修改过makefile需要make veryclean.
