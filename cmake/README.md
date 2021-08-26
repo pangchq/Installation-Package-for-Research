@@ -1,7 +1,7 @@
 ## cmake  
 **需要先安装gcc, 并且cmake与gcc版本对应**
-1. 下载cmake相应版本并解压;
-2. bootstrap;
+1. 下载cmake相应版本并解压;  
+2. bootstrap;  
 ```
 ./bootstrap --prefix=/dir/cmake-x.x.x
 ```
