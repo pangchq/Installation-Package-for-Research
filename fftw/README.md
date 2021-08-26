@@ -1,6 +1,6 @@
 ## fftw
-1. 下载fftw相应版本并解压;
-2. configure;
+1. 下载fftw相应版本并解压;  
+2. configure;  
 ```
 ./configure --prefix=/Path/to/fftw-x.x.x --enable-sse2 --enable-avx --enable-float --enable-shared
 ```
