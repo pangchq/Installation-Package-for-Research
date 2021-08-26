@@ -43,7 +43,8 @@ tar zxvf MS_lib.tar.gz
 cp lib/* /Path/to/MaterialsStudio19.1/lib/
 ```
 * 提交脚本为  
-CASTEP
+CASTEP, yhbatch -N 2 run_CASTEP basename  
+run_CASTEP内容为  
 ```
 #!/WORK/app/osenv/ln1/bin/bash
 
@@ -51,7 +52,7 @@ source /WORK/app/toolshs/unsetfunc
 export LC_ALL=C
 export I_MPI_FABRICS=shm:tcp
 
-NUM_NODES=1
+NUM_NODES=2
 PROCS_PER_NODE=24
 BASENAME=$1
 MS_PATH=/WORK/sysu_pangchq_1/app/MS2019/MaterialsStudio19.1
@@ -85,7 +86,7 @@ source /WORK/app/toolshs/unsetfunc
 export LC_ALL=C
 export I_MPI_FABRICS=shm:tcp
 
-NUM_NODES=1
+NUM_NODES=2
 PROCS_PER_NODE=24
 BASENAME=$1
 MS_PATH=/WORK/sysu_pangchq_1/app/MS2019/MaterialsStudio19.1
@@ -119,7 +120,7 @@ source /WORK/app/toolshs/unsetfunc
 export LC_ALL=C
 export I_MPI_FABRICS=shm:tcp
 
-NUM_NODES=1
+NUM_NODES=2
 PROCS_PER_NODE=24
 BASENAME=$1
 MS_PATH=/WORK/sysu_pangchq_1/app/MS2019/MaterialsStudio19.1
