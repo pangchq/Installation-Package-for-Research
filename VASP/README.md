@@ -2,11 +2,15 @@
 1. 下载vasp相应版本并解压;  
 2. 下载vtstcode和vtstscripts, 把vtstcode解压并copy到vasp的src文件夹下, 注意对应版本  
 修改src/main.F源码:  
+```
 CALL CHAIN_FORCE(T_INFO%NIONS,DYN%POSION,TOTEN,TIFOR, &
-     LATT_CUR%A,LATT_CUR%B,IO%IU6)  
-改为  
+     LATT_CUR%A,LATT_CUR%B,IO%IU6)
+```
+改为
+```  
 CALL CHAIN_FORCE(T_INFO%NIONS,DYN%POSION,TOTEN,TIFOR, &
-      TSIF,LATT_CUR%A,LATT_CUR%B,IO%IU6)  
+      TSIF,LATT_CUR%A,LATT_CUR%B,IO%IU6)
+```
 修改src/.objects源码, 在chain.o前（大概第72行）添加如下内容:  
 bfgs.o dynmat.o instanton.o lbfgs.o sd.o cg.o dimer.o bbm.o \  
 fire.o lanczos.o neb.o qm.o opt.o \
