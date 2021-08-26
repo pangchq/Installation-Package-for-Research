@@ -45,11 +45,10 @@ cp lib/* /Path/to/MaterialsStudio19.1/lib/
 * 提交脚本为  
 CASTEP
 ```
-#!/BIGDATA1/app/osenv/bin/bash
+#!/WORK/app/osenv/ln1/bin/bash
 #input 
-source /BIGDATA1/app/toolshs/unsetfunc
+source /WORK/app/toolshs/unsetfunc
 export LC_ALL=C
-#source /NSFCGZ/app/osenv/ln1/set.sh
 export I_MPI_FABRICS=shm:tcp
 
 NUM_NODES=1
@@ -86,15 +85,13 @@ done
 #cp ${BASENAME}.xsd ${BASENAME}_Files/Documents/
 #$MS_PATH/etc/Scripting/bin/RunMatScript.sh -np $NUM_PROCS  $BASENAME 
 $MS_PATH/etc/CASTEP/bin/RunCASTEP.sh -np $NUM_PROCS $BASENAME
-
 ```
 DMol3
 ```
-#!/BIGDATA1/app/osenv/bin/bash
+#!/WORK/app/osenv/ln1/bin/bash
 #input 
-source /BIGDATA1/app/toolshs/unsetfunc
+source /WORK/app/toolshs/unsetfunc
 export LC_ALL=C
-#source /BIGDATA1/app/osenv/ln1/set.sh
 export I_MPI_FABRICS=shm:tcp
 
 NUM_NODES=1
@@ -125,13 +122,12 @@ done
 #cp ${BASENAME}.xsd ${BASENAME}_Files/Documents/
 #$MS_PATH/etc/Scripting/bin/RunMatScript.sh -np $NUM_PROCS  $BASENAME 
 $MS_PATH/etc/DMol3/bin/RunDMol3.sh -np $NUM_PROCS $BASENAME
-
 ```
 MSpl
 ```
-#!/BIGDATA1/app/osenv/bin/bash
+#!/WORK/app/osenv/ln1/bin/bash
 #input 
-source /BIGDATA1/app/toolshs/unsetfunc
+source /WORK/app/toolshs/unsetfunc
 export LC_ALL=C
 export I_MPI_FABRICS=shm:tcp
 
@@ -163,5 +159,4 @@ done
 mkdir -p ${BASENAME}_Files/Documents
 cp ${BASENAME}.xsd ${BASENAME}_Files/Documents/
 $MS_PATH/etc/Scripting/bin/RunMatScript.sh -np $NUM_PROCS  $BASENAME 
-
 ```
