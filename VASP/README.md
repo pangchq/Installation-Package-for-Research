@@ -15,7 +15,7 @@ fire.o lanczos.o neb.o qm.o opt.o \
 5. module load intel-compilers/mkl-14, echo $MKLROOT;
 6. 选择合适的makefile, cp arch/makefile.include.linux_intel makefile.include;
 7. 修改makefile.include
-···
+```
 ------------------------------------------------------------vasp makefile in Tianhe-2----------------------------------------------------------------
 # Precompiler options
 CPP_OPTIONS= -DHOST=\"LinuxIFC\"\
@@ -95,5 +95,5 @@ GENCODE_ARCH    := -gencode=arch=compute_30,code=\"sm_30,compute_30\" \
  
 MPI_INC    = $(I_MPI_ROOT)/include64/
 ------------------------------------------------------------vasp makefile in Tianhe-2----------------------------------------------------------------
-···
+```
 8. make std或者make all, 可执行文件在vasp/bin文件夹下, 若修改过makefile需要make veryclean.
