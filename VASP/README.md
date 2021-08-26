@@ -100,4 +100,5 @@ GENCODE_ARCH    := -gencode=arch=compute_30,code=\"sm_30,compute_30\" \
  
 MPI_INC    = $(I_MPI_ROOT)/include64/
 ```
-8. make std或者make all, 可执行文件在vasp/bin文件夹下, 若修改过makefile需要make veryclean.
+8. make std或者make all, 可执行文件在vasp/bin文件夹下, 若修改过makefile需要make veryclean;
+9. 把vtstscripts路径加入环境变量.
