@@ -14,4 +14,24 @@ cd ~/Path/to/Accelrys/LicensePack/linux/bin
 ./lp_install ~/Path/to/msi.lic
 Checkout succeeded, 看到这个说明License安装成功, MS安装完毕
 ```
-4. 
+**如果在天河-2安装, 需要进行一些额外修改**
+vi /Path/to/BIOVIA_LicensePack/etc/lp_echovars
+```
+line1 #! /bin/csh -f
+```
+改为
+```
+line1 #! /WORK/app/osenv/ln1/bin/csh -f
+```
+vi /Path/to/MaterialsStudio19.1/etc/Gateway/root_default/dsd/commands/DSD_serverutils.pm
+```
+
+```
+改为
+```
+
+```
+提交脚本为
+```
+
+```
