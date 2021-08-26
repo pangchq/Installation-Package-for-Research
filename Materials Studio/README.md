@@ -14,7 +14,7 @@ cd ~/Path/to/Accelrys/LicensePack/linux/bin
 ./lp_install ~/Path/to/msi.lic
 Checkout succeeded, 看到这个说明License安装成功, MS安装完毕
 ```
-**如果在天河-2安装, 需要进行一些额外修改**
+**如果在天河-2安装, 需要进行一些额外修改**  
 vi /Path/to/BIOVIA_LicensePack/etc/lp_echovars
 ```
 line1 #! /bin/csh -f
