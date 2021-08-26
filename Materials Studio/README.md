@@ -124,7 +124,7 @@ done
 $MS_PATH/etc/DMol3/bin/RunDMol3.sh -np $NUM_PROCS $BASENAME
 ```
 MSpl
-```
+```bash
 #!/WORK/app/osenv/ln1/bin/bash
 #input 
 source /WORK/app/toolshs/unsetfunc
