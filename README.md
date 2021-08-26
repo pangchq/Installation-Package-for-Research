@@ -9,3 +9,9 @@
 * Gromacs
 * Materials Studio
 * gnuplot
+* vaspkit
+* moltemplate
+* PACKMOL
+* p4vasp
+* Jmol
+* Pymol
