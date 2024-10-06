@@ -2,10 +2,7 @@
 1. 下载vasp相应版本并解压;  
 2. 固定基矢插件：\
 https://github.com/Chengcheng-Xiao/VASP_OPT_AXIS 下载对应版本的cell_relax.patch, copy到vasp根目录, patch -p0 < cell_relax.patch;
-3. 隐式溶剂插件：\
-vaspsol https://github.com/henniggroup/VASPsol 下载patch, copy solvation.F覆盖vasp的src文件夹下的同名文件，copy对应版本的patch到src并patch -p0 < xxx.patch;\
-vaspsol++ https://github.com/VASPsol/VASPsol 问作者要patch, 选择合适的patch, 然后在vasp根目录patch -p1 < xxx.patch； 
-5. VTST插件：\
+3. VTST插件：\
 https://theory.cm.utexas.edu/vtsttools/installation.html, 下载vtstcode和vtstscripts, 把vtstcode解压并copy vtstcode/src/*到vasp的src文件夹下, 注意对应版本；如果是vtstcode6.3，还需要修改vasp/src/makefile如下
 ```
 LIB= lib parser pyamff_fortran
@@ -50,6 +47,9 @@ vtstcode6.3有个小问题(参考http://bbs.keinsci.com/thread-46112-1-1.html), 
  202           posion = DYN%POSION
  203         ENDIF
 ```
+4. 隐式溶剂插件：\
+vaspsol https://github.com/henniggroup/VASPsol 下载patch, copy solvation.F覆盖vasp的src文件夹下的同名文件，copy对应版本的patch到src并patch -p0 < xxx.patch;\
+vaspsol++ https://github.com/VASPsol/VASPsol 问作者要patch, 选择合适的patch, 然后在vasp根目录patch -p1 < xxx.patch； 
 5. 恒电势插件：\
 https://github.com/yuanyue-liu-group/CP-VASP?tab=readme-ov-file, 填表单问作者要patch, 然后把patch放在vasp/src内, patch -p0 < xxx.patch;
 6. module load 相应的mpi;  
