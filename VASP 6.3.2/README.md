@@ -9,8 +9,8 @@ https://github.com/henniggroup/VASPsol 下载patch, copy solvation.F覆盖vasp�
 ```
 LIB= lib parser pyamff_fortran
 ```
-* 此外要修改vasp/src/main.F和vasp/src/.objects:  \
-main.F
+此外要修改vasp/src/main.F和vasp/src/.objects:  \
+*main.F
 ```
 CALL CHAIN_FORCE(T_INFO%NIONS,DYN%POSION,TOTEN,TIFOR, &
      LATT_CUR%A,LATT_CUR%B,IO%IU6)
@@ -27,7 +27,7 @@ IF (LCHAIN) CALL chain_init( T_INFO, IO)
 ```
 CALL chain_init( T_INFO, IO)
 ```
-./objects, 在chain.o前添加如下内容:  
+*./objects, 在chain.o前添加如下内容:  
 ```
 bfgs.o dynmat.o instanton.o lbfgs.o sd.o cg.o dimer.o bbm.o \
 fire.o lanczos.o neb.o qm.o \
