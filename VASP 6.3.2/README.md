@@ -1,9 +1,9 @@
 ## VASP, 包含vtst、VASPsol、fix lattice vector components这三个常用功能，如果想进行恒电势模拟还要加上CP-VASP插件  
 1. 下载vasp相应版本并解压;  
 2. 固定基矢：\
-  https://github.com/Chengcheng-Xiao/VASP_OPT_AXIS 下载对应版本的cell_relax.patch, copy到vasp根目录, patch -p0 < cell_relax.patch;
-3. 隐式溶剂：
-  https://github.com/henniggroup/VASPsol 下载patch, copy solvation.F覆盖vasp的src文件夹下的同名文件，copy对应版本的patch到src并patch -p0 < xxx.patch;  
+https://github.com/Chengcheng-Xiao/VASP_OPT_AXIS 下载对应版本的cell_relax.patch, copy到vasp根目录, patch -p0 < cell_relax.patch;
+3. 隐式溶剂：\
+https://github.com/henniggroup/VASPsol 下载patch, copy solvation.F覆盖vasp的src文件夹下的同名文件，copy对应版本的patch到src并patch -p0 < xxx.patch;  
 4. VTST：
   下载vtstcode和vtstscripts, 把vtstcode解压并copy到vasp的src文件夹下, 注意对应版本  
 * 修改src/main.F源码:  
