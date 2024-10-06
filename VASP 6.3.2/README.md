@@ -35,7 +35,7 @@ fire.o lanczos.o neb.o qm.o \
 pyamff_fortran/*.o ml_pyamff.o \
 opt.o \
 ```
-vtstcode6.3有个小问题, 少了一个ENDIF，需要补上，否则编译出错；在vasp/src/chain.F大概202行把
+vtstcode6.3有个小问题(参考http://bbs.keinsci.com/thread-46112-1-1.html), 少了一个ENDIF，需要补上，否则编译出错；在vasp/src/chain.F大概202行把
 ```
  199         IF (newcar_exists) THEN
  200           CALL RD_POSCAR_HEAD(LATT_CUR, T_I, NIOND, NIONPD, NTYPD, NTYPPD, IO%IU0, IO%IU6)
