@@ -5,7 +5,7 @@ https://github.com/Chengcheng-Xiao/VASP_OPT_AXIS 下载对应版本的cell_relax
 3. 隐式溶剂：\
 https://github.com/henniggroup/VASPsol 下载patch, copy solvation.F覆盖vasp的src文件夹下的同名文件，copy对应版本的patch到src并patch -p0 < xxx.patch;  
 4. VTST：\
-下载vtstcode和vtstscripts, 把vtstcode解压并copy vtstcode/src/*到vasp的src文件夹下, 注意对应版本；如果是vtst6.3，还需要修改vasp/src/makefile如下
+https://theory.cm.utexas.edu/vtsttools/installation.html, 下载vtstcode和vtstscripts, 把vtstcode解压并copy vtstcode/src/*到vasp的src文件夹下, 注意对应版本；如果是vtst6.3，还需要修改vasp/src/makefile如下
 ```
 LIB= lib parser pyamff_fortran
 ```
@@ -35,10 +35,10 @@ pyamff_fortran/*.o ml_pyamff.o \
 opt.o \
 ```
 5. 恒电势：\
-https://github.com/yuanyue-liu-group/CP-VASP?tab=readme-ov-file，填表单问作者要patch，然后把patch放在vasp/src内，patch -p0 < xxx.patch;
+https://github.com/yuanyue-liu-group/CP-VASP?tab=readme-ov-file, 填表单问作者要patch, 然后把patch放在vasp/src内, patch -p0 < xxx.patch;
 6. module load 相应的mpi;  
 7. 选择合适的makefile, 例如cp arch/makefile.include.linux_intel makefile.include; 
-8. 修改makefile.include,有一些插件需要再CPP_OPTIONS添加参数；
+8. 修改makefile.include, 有一些插件需要再CPP_OPTIONS添加参数；
 9. make std或者make all, 可执行文件在vasp/bin文件夹下, 若修改过makefile需要make veryclean;  
 10. 把vtstscripts路径加入环境变量.
 
