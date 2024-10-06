@@ -4,7 +4,7 @@
 https://github.com/Chengcheng-Xiao/VASP_OPT_AXIS 下载对应版本的cell_relax.patch, copy到vasp根目录, patch -p0 < cell_relax.patch;
 3. 隐式溶剂插件：\
 vaspsol https://github.com/henniggroup/VASPsol 下载patch, copy solvation.F覆盖vasp的src文件夹下的同名文件，copy对应版本的patch到src并patch -p0 < xxx.patch;\
-vaspsol++ https://github.com/VASPsol/VASPsol 问作者要patch, 后续同上； 
+vaspsol++ https://github.com/VASPsol/VASPsol 问作者要patch, 选择合适的patch, 然后在vasp根目录patch -p1 < xxx.patch； 
 5. VTST插件：\
 https://theory.cm.utexas.edu/vtsttools/installation.html, 下载vtstcode和vtstscripts, 把vtstcode解压并copy vtstcode/src/*到vasp的src文件夹下, 注意对应版本；如果是vtstcode6.3，还需要修改vasp/src/makefile如下
 ```
