@@ -16,8 +16,8 @@ CALL CHAIN_FORCE(T_INFO%NIONS,DYN%POSION,TOTEN,TIFOR, &
 bfgs.o dynmat.o instanton.o lbfgs.o sd.o cg.o dimer.o bbm.o \
 fire.o lanczos.o neb.o qm.o opt.o \
 ```
-3. https://github.com/henniggroup/VASPsol 下载patch, copy solvation.F覆盖vasp的src文件夹下的同名文件;  
-4. https://github.com/Chengcheng-Xiao/VASP_OPT_AXIS 下载cell_relax.patch, copy到vasp根目录, patch -p0 < cell_relax.patch;  
+3. https://github.com/henniggroup/VASPsol 下载patch, copy solvation.F覆盖vasp的src文件夹下的同名文件，copy对应版本的patch到src并patch -p0 < xxx.patch;  
+4. https://github.com/Chengcheng-Xiao/VASP_OPT_AXIS 下载对应版本的cell_relax.patch, copy到vasp根目录, patch -p0 < cell_relax.patch;  
 5. module load intel-compilers/mkl-14, echo $MKLROOT;  
 6. 选择合适的makefile, cp arch/makefile.include.linux_intel makefile.include;  
 7. 修改makefile.include, 下面是适用于天河-2的makefile.include;  
