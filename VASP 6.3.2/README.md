@@ -2,7 +2,7 @@
 1. 下载vasp相应版本并解压;  
 2. 固定基矢插件：(虽然是针对5.4.4版本的，但是6.xx也可用)\
 https://github.com/Chengcheng-Xiao/VASP_OPT_AXIS 下载对应版本的cell_relax.patch, copy到vasp根目录, patch -p0 < cell_relax.patch;
-3. VTST插件：\
+3. VTST插件：(不同版本修改东西有区别，仔细看)\
 https://theory.cm.utexas.edu/vtsttools/installation.html, 下载vtstcode和vtstscripts, 把vtstcode解压并copy vtstcode/src/*到vasp的src文件夹下, 注意对应版本；如果是vtstcode6.3，还需要修改vasp/src/makefile如下
 ```
 LIB= lib parser pyamff_fortran
