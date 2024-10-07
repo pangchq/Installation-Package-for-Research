@@ -54,7 +54,7 @@ vaspsol++ https://github.com/VASPsol/VASPsol 问作者要patch, 选择合适的p
 https://github.com/yuanyue-liu-group/CP-VASP?tab=readme-ov-file, 填表单问作者要patch, 然后把patch放在vasp/src内, patch -p0 < xxx.patch;
 6. module load 相应的mpi;  
 7. 选择合适的makefile, 例如cp arch/makefile.include.linux_intel makefile.include; 
-8. 修改makefile.include, 有一些插件需要再CPP_OPTIONS添加参数；
+8. 修改makefile.include, 有一些插件需要再CPP_OPTIONS添加参数；有个别参数对效率影响很大，比如FCL选qmkl还是mkl，一定要调试；
 9. make std或者make all, 可执行文件在vasp/bin文件夹下, 若修改过makefile需要make veryclean;  
 10. 把vtstscripts路径加入环境变量.
 
