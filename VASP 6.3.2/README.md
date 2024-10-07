@@ -49,7 +49,7 @@ vtstcode6.3有个小问题(参考http://bbs.keinsci.com/thread-46112-1-1.html), 
 ```
 4. 隐式溶剂插件：\
 vaspsol https://github.com/henniggroup/VASPsol 下载patch, copy solvation.F覆盖vasp的src文件夹下的同名文件，copy对应版本的patch到src并patch -p0 < xxx.patch;\
-vaspsol++ https://github.com/VASPsol/VASPsol 问作者要patch, 选择合适的patch, 然后在vasp根目录patch -p1 < xxx.patch； 
+vaspsol++ https://github.com/VASPsol/VASPsol 问作者要patch, 选择合适的solvation.F覆盖src/solvation.F, 选择合适的patch, 然后在vasp根目录patch -p1 < xxx.patch； 
 5. 恒电势插件：\
 https://github.com/yuanyue-liu-group/CP-VASP?tab=readme-ov-file, 填表单问作者要patch, 然后把patch放在vasp/src内, patch -p0 < xxx.patch;
 6. module load 相应的mpi;  
